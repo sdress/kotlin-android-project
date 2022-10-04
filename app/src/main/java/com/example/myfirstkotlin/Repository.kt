@@ -1,7 +1,7 @@
 import java.util.ArrayList
 
 class Repository private constructor() {
-    private var users: MutableList<User?>? = null
+    private var users: MutableList<User>? = null
 
     // keeping the constructor private to enforce the usage of getInstance
     init {
@@ -14,7 +14,7 @@ class Repository private constructor() {
         users.add(user3)
     }
 
-    fun getUsers(): List<User?>? {
+    fun getUsers(): List<User>? {
         return users
     }
 
@@ -55,4 +55,6 @@ class Repository private constructor() {
                 return INSTANCE
             }
     }
+
+
 }
